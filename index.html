@@ -1,0 +1,1869 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>New SKA Technology Pvt. Ltd.</title>
+
+  <link rel="icon" type="image/x-icon" href="img/fav-icon.webp" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="jquery.flipster.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+    body {
+      position: relative;
+    }
+
+
+    #preloader {
+      z-index: 6000;
+      width: 100vw;
+      height: 100%;
+      position: fixed;
+      background: #262626;
+    }
+
+    #preloaderHeading {
+      z-index: 0;
+      border: 0px solid white;
+      border-radius: 100px 0 100px 0;
+      margin: 0;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      padding-right: 10vw;
+      padding-left: 10vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      font-family: sans-serif;
+      font-size: 8vw;
+      font-weight: 900;
+      letter-spacing: .1em;
+      background: #72c3ff;
+      color: #fff;
+      text-shadow: 5px 10px 5px rgba(0, 0, 0, .7);
+
+    }
+
+
+
+    #preloaderHeading:before {
+      z-index: -1;
+      border: 0px solid white;
+      border-radius: 50px 0 50px 0;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(img/preloader-back2new2.webp);
+      background-size: cover;
+      animation: animateBefore 12s linear infinite;
+      transition: .5s;
+
+    }
+
+    @keyframes animateBefore {
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 100%;
+      }
+    }
+
+    #preloaderHeading:after {
+      z-index: 1;
+      content: "";
+      border: 0px solid white;
+      border-radius: 50px 0 50px 0;
+      position: absolute;
+      top: 20%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(img/preloader-frontnew2.webp);
+      background-size: cover;
+      animation: animateafter 10s linear infinite;
+      transition: .5s;
+
+
+    }
+
+    @keyframes animateafter {
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 100%;
+      }
+    }
+  </style>
+
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sNavbar" data-bs-offset="10" onload="formReset()">
+
+  <div id="preloader">
+    <h1 id="preloaderHeading">SKA Technology</h1>
+  </div>
+
+  <div id="success" class="alert alert-success alert-dismissible fade " role="alert">
+    <strong>Success</strong> You have successfully submitted form.....
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <div id="failure" class="alert alert-danger alert-dismissible fade " role="alert">
+    <strong>Error:</strong> Your Name and Mobile Number is mandatory to submit. And Please try to fill all the details
+    properly.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+
+  <header>
+
+    <nav id="sNavbar" class=" navbar navbar-expand-lg  fixed-top navBgColor justify-content-center ">
+
+      <div class="whiteNavContainer hdrContainer  d-inline-flex  ">
+        <div class="logoBox px-2 py-1  ">
+          <a class="navbar-brand  sLogo " href="#">
+            <img src="img/newlogo.webp" alt="logo" class=" img-fluid d-inline-block align-top logoImg" />
+          </a>
+        </div>
+
+        <button class="navbar-toggler  navBtn justify-content-end " type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+          <!-- aria-expanded="false"
+          aria-label="Toggle navigation" -->
+
+          <span class="navbar-toggler-icon  " id="navTogglerIcon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end navbar-nav   text-bg-dark d-flex navMenus justify-content-end  "
+          tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <!-- <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button> -->
+          </div>
+          <div class="offcanvas-body ">
+
+            <ul class="nav navbar-nav   nav-underline  py-3  navUl  d-inline-flex ">
+              <li class="nav-item px-3">
+                <a class="nav-link   scrollTrigger" aria-current="page" href="#mainSlider">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link  scrollTrigger" href="#about">About Us</a>
+              </li>
+              <li class="nav-item dropdown px-3 ">
+                <span class="nav-link dropdown-toggle" id="navServicesDropDownBtn" role="button"
+                  data-bs-toggle="dropdown" href="#" aria-expanded="true">
+                  Services
+                </span>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item  scrollTrigger" href="#newServicesSection">Electricals</a></li>
+                  <li><a class="dropdown-item  scrollTrigger" href="#newServicesSection">Networking</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item   scrollTrigger" href="#newServicesSection">Data Centers</a></li>
+                  <li><a class="dropdown-item   scrollTrigger" href="#newServicesSection">CCTV Security</a></li>
+
+                </ul>
+              </li>
+
+              <li class="nav-item px-3">
+                <a class="nav-link  scrollTrigger" href="#ourWork">Gallery</a>
+              </li>
+
+              <li class="nav-item px-3">
+                <a class="nav-link   scrollTrigger" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+    <!-- 
+    <div class="slider-box" id="newSlider">
+
+      <div class="banner1">
+
+        <div class="slider1">
+          <img src="img/new-slider4.webp" alt="sliderImage" class="slider1Images">
+        </div>
+
+        <div class="slider1Overlay">
+          <div class="slider1Content slider1Content1">
+            <h1>Welcome to SKA Technology Pvt. Ltd.</h1>
+            <span></span>
+            <h3>You are at the Best place for Data Center and Networking Solutions</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="banner2">
+
+        <div class="slider1">
+          <img src="img/new-slider2.webp" alt="sliderImage" class="slider1Images">
+        </div>
+
+        <div class="slider1Overlay slider1OverlayBox2">
+          <div class="slider1Content slider1Content2">
+            <h1>Experts in Switching Networks</h1>
+            <span></span>
+            <h3>We Handle all kind of networking in Banks, Ministry, PSU, and Corporate office Level outlets.</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="banner3">
+
+        <div class="slider1">
+          <img src="img/new-slider3.webp" alt="sliderImage" class="slider1Images">
+        </div>
+
+        <div class="slider1Overlay">
+          <div class="slider1Content slider1Content3">
+            <h1>Works with Top Brands</h1>
+            <span></span>
+            <h3>We deals in CISCO, NETGEAR, D-Link and AWAYA</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="banner4">
+
+
+        <div class="slider1">
+          <img src="img/new-slider1.webp" alt="sliderImage" class="slider1Images">
+        </div>
+
+        <div class="slider1Overlay">
+          <div class="slider1Content slider1Content4">
+            <h1>Long life Results</h1>
+            <span></span>
+            <h3>The Work We'll do will make you relax from all Tech issues. </h3>
+          </div>
+        </div>
+
+      </div>
+
+       
+
+    </div> -->
+
+
+
+    <section id="mainSlider" class="mainSlider">
+
+      <div class="banners banner1 bannerBoxs " id="banner1">
+        <!-- <div><img src="https://source.unsplash.com/1080x720/?nature" alt="" class="bannerImages banner1Img" id="banner1Img"></div> -->
+        <div class="bannerImgBox"><img src="img/new-slider4-webp.webp" alt="" class="bannerImages banner1Img"
+            id="banner1Img"></div>
+        <div class="bannerImgBox">
+          <div class="bannerOverlay overlayBanner1">
+            <h1>Welcome to SKA Technology Pvt. Ltd.</h1>
+            <p>You are at the Best place for Data Center and Networking Solutions</p>
+          </div>
+        </div>
+      </div>
+      <div class="banners banner2  bannerBoxs" id="banner2">
+        <!-- <div><img src="https://source.unsplash.com/1080x720/?garden" alt="" class="bannerImages banner2Img" id="banner2Img"></div> -->
+        <div class="bannerImgBox"><img src="img/new-slider1.webp" alt="" class="bannerImages banner2Img" id="banner2Img">
+        </div>
+        <div class="bannerImgBox">
+          <div class="bannerOverlay overlayBanner2">
+            <h1>Experts in Switching Networks</h1>
+            <p>We Handle all kind of networking in Banks, Ministry, PSU, and Corporate office Level outlets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="banners banner3  bannerBoxs" id="banner3">
+        <!-- <div><img src="https://source.unsplash.com/1080x720/?doctor" alt="" class="bannerImages banner3Img" id="banner3Img"></div> -->
+        <div class="bannerImgBox"><img src="img/new-slider2.webp" alt="" class="bannerImages banner3Img" id="banner3Img">
+        </div>
+        <div class="bannerImgBox">
+          <div class="bannerOverlay overlayBanner3">
+            <h1>Works with Top Brands</h1>
+            <p>We deals in CISCO, NETGEAR, D-Link and AWAYA</p>
+          </div>
+        </div>
+      </div>
+      <div class="banners banner4  bannerBoxs" id="banner4">
+        <!-- <div><img src="https://source.unsplash.com/1080x720/?sky" alt="" class="bannerImages banner4Img" id="banner4Img"></div> -->
+        <div class="bannerImgBox"><img src="img/new-slider3-webp.webp" alt="" class="bannerImages banner4Img" id="banner4Img">
+        </div>
+        <div class="bannerImgBox">
+          <div class="bannerOverlay overlayBanner4">
+            <h1>Long life Results</h1>
+            <p>The Work We'll do will make you relax from all Tech issues.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bannerDots">
+        <span id="bannerdot1" onclick="sliderShow1stHideAll();">-</span>
+        <span id="bannerdot2" onclick="sliderShow2ndHideAll();">-</span>
+        <span id="bannerdot3" onclick="sliderShow3rdHideAll();">-</span>
+        <span id="bannerdot4" onclick="sliderShow4thHideAll();">-</span>
+      </div>
+
+    </section>
+
+    <div class="sliderborder">
+
+    </div>
+
+    <div id="about" class="aboutSection py-5 ">
+      <div class=" whiteAboutContainer  reveal">
+
+        <h1 id="aboutHeading" class="section-headings">About Us</h1>
+
+
+        <div class="row featurette d-flex justify-content-center align-items-center my-5">
+
+          <div class="col-md-7 aboutUsText px-5">
+            <h2 class="featurette-heading">
+              Our SKA Technology
+            </h2>
+
+            <p class="lead" style="text-align: justify;">
+
+              Since its founding in 2007, Ska Technology, which is based in the vibrant centre of New Delhi, has changed the networking and cabling services industry. After more than ten years of unwavering dedication, we've built a stellar reputation for accuracy and dependability. Our path is characterized by a commitment to excellence, providing not only technical know-how but also customized solutions that surpass customers' expectations. Beyond our technical expertise, we place a high value on establishing enduring bonds with our clients since we see technology as a tool for productivity. Ska Technology continues to lead the way in innovation as we march into the future, foreseeing and equipping itself to meet any obstacles that may arise. Selecting Ska Technologies entails working with a group dedicated to turning ideas into reality in the rapidly changing digital world. Welcome to Ska Technology, where there has been excellence for more than ten years
+
+            </p>
+
+              <!-- <div class="accordion accordion-flush my-5 " id="accordionFlushExample">
+
+
+                <div class="accordion-item ">
+                  <h2 class="accordion-header ">
+                    <button class="accordion-button collapsed ourSkaTech" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Read More...
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body accordion-border">
+                      <p class="lead">
+                        Modern UPS services, cutting-edge networking and cabling solutions, and a broad range of
+                        electrical
+                        expertise, including installation, power distribution, energy-saving solutions, and cutting-edge
+                        security systems, are just a few of the services we offer. We at Ska Technology are committed to
+                        enlightening you and giving you control over the future.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div> -->
+          
+          </div>
+
+          <div class="col-md-5 ">
+            <div class="aboutImageContainer">
+
+              <img id="aboutImg1" class="aboutImages " src="img/smallimg2new.webp" alt="data center"
+                title="CISCO Manageable Switch" />
+              <div class="overlayRight">
+                <div class="overlayRightText">CISCO Manageable Switch</div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+
+          <div class="col-md-7 order-md-2 px-5 aboutUsText">
+            <h2 class="featurette-heading">
+              The Mission
+            </h2>
+
+            <p class="lead" style="text-align: justify;">
+              SKA Technology believes that the success of any individual or a group depends on professionalism in
+              work,
+              time management and quality of workmanship. With commitment, dedication and loyalty, it now aims at
+              widening
+              its scope of work and creating a comfortable, stress-free environment.
+            </p>
+
+            <div class="accordion accordion-flush my-5 " id="accordionFlushExample1">
+
+              <div class="accordion-item ">
+                <h2 class="accordion-header ">
+                  <button class="accordion-button collapsed ourSkaTech" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                    Read More...
+                  </button>
+                </h2>
+                <div id="flush-collapseOne1" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample1">
+                  <div class="accordion-body accordion-border">
+                    <p class="lead">
+                      SKA Technology was established in the year 1998 to provide complete solution in computer LAN
+                      Cabling
+                      (UTP
+                      &
+                      Optical Fiber) all type of electrical works, Later on it also started work on installations,
+                      operation,
+                      maintenance of DG sets and AMF panel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-md-5 order-md-1">
+
+            <div class="aboutLeftImageContainer">
+              <img id="aboutImg2" class="aboutImages " src="img/smallimg11new.webp" alt="cabling"
+                title="cable-dressing" />
+              <div class="overlayLeft">
+                <div class="overlayLeftText">Cable Dressing</div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- <div id="services" class="  container-fluid  py-5 ">
+
+        <hr class="hrLineServices z-n1 ">
+
+
+        <div id="serviceCarousel" class="services-slider carousel slide my-5" data-bs-ride="carousel"
+          data-bs-pause="false">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner services-slider1-inner">
+
+            <div class="carousel-item active " data-bs-pause="false" data-bs-interval="10000">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3  ">
+
+                <div class="col ">
+
+                  <div class="services-card servicesCard card-padding" id="hElectricals">
+                    <img src="img/electrical-design-drawing.webp" class="card-img-top  services-card-Image" alt="...">
+                    <div class="card-body services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">Electrical Design and Planning
+                      </h3>
+                      <p class="services-card-text ">Let our comprehensive electrical design and planning service
+                        jumpstart
+                        your
+                        projects. In order to maximize safety, effectiveness, and cost-effectiveness, we specialize in
+                        creating custom solutions.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col">
+                  <div class="services-card servicesCard card-padding ">
+                    <img src="img/electrical-installation-and-maintenance-service.webp"
+                      class="card-img-top  services-card-Image" alt="...">
+                    <div class="services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">Installation and Maintenance
+                        Electricals
+                      </h3>
+                      <p class="services-card-text">Experience seamless electrical solutions with our Electrical
+                        Installation
+                        and
+                        Management service. From safety-focused installations to efficient project management, we
+                        power
+                        your
+                        success.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col" id="hNetworking">
+                  <div class="services-card servicesCard card-padding">
+                    <img src="img/Cable-Technician.webp" class="card-img-top services-card-Image" alt="...">
+                    <div class="services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">Networking and Cabling
+                      </h3>
+                      <p class="services-card-text">Unlock seamless connectivity with our Networking and Cabling
+                        expertise.
+                        <br>
+                        <br>
+                        We specialize in designing and deploying reliable networks, tailored to your unique
+                        requirements,
+                        to
+                        ensure your success.
+
+
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+            </div>
+
+            <div class="carousel-item " data-bs-pause="false" data-bs-interval="10000">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+
+                <div class="col">
+
+                  <div class="services-card servicesCard card-padding">
+                    <img src="img/ups-solution-services.webp" class="card-img-top services-card-Image" alt="...">
+                    <div class="services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">UPS Solutions and Services
+                      </h3>
+                      <p class="services-card-text">Elevate your power reliability with our UPS (Uninterruptible Power
+                        Supply)
+                        Solutions and Services. We provide robust, customized UPS systems that safeguard critical
+                        operations
+                        against power disruptions. Our expert team ensures seamless installation and offers
+                        comprehensive
+                        maintenance to keep your systems running flawlessly.
+
+
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col" id="hDataCenter">
+                  <div class="services-card servicesCard card-padding">
+                    <img src="img/data-center.webp" class="card-img-top  services-card-Image" alt="...">
+                    <div class="services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">Data Center Infrastructure Solutions
+                      </h3>
+                      <p class="services-card-text">We create solutions that enhance the efficiency of an IT
+                        environment. We
+                        help
+                        your
+                        organization expand faster by providing the finest data center infrastructure. Raised floor,
+                        Electric
+                        work, Fire suppression system, Water leak detection, and Etc.
+
+
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col">
+                  <div class="services-card servicesCard card-padding">
+                    <img src="img/it-facility-management.webp" class="card-img-top services-card-Image" alt="...">
+                    <div class="services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">IT Facility Management Services
+                      </h3>
+                      <p class="services-card-text">We provide facilities management services to monitor and safeguard
+                        your
+                        networks,
+                        systems, and applications. This allows you to concentrate on your primary business while we
+                        work
+                        on
+                        improving your IT infrastructure. Our IT facilities management services aid in productivity
+                        and
+                        efficiency.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item " data-bs-pause="false" data-bs-interval="10000">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+
+                <div class="col" id="hSecurity">
+
+                  <div class="services-card servicesCard card-padding">
+                    <img src="img/fingerprint-access-control-system.webp" class="card-img-top services-card-Image"
+                      alt="...">
+                    <div class="services-card-body ">
+                      <h3 class="services-card-title" style="font-weight: bolder;">Security and Access Control Systems
+                      </h3>
+                      <p class="services-card-text">Access control is a data security process that enables organizations
+                        to
+                        manage
+                        who is authorized to access corporate data and resources. Secure access control uses policies
+                        that
+                        verify users are who they claim to be and ensures appropriate control access levels are
+                        granted
+                        to
+                        users.
+
+
+
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col">
+                  <div class="services-card servicesCard card-padding">
+                    <img src="img/fire-safety.webp" class="card-img-top  services-card-Image" alt="...">
+                    <div class="services-card-body">
+                      <h3 class="services-card-title" style="font-weight: bolder;">Fire Safety Solutions
+                      </h3>
+                      <p class="services-card-text">We provide Fire safety solutions is the set of tools to reduce
+                        destruction
+                        caused
+                        by fire, like fire-alarms, fire-alert-system, Fire sensors, Safety Cylinders, etc. Fire safety
+                        measures include those that are intended to prevent the ignition of an uncontrolled fire and
+                        those
+                        that are used to limit the spread and impact of a fire.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div> -->
+
+    <!-- <hr> -->
+
+    <section id="newServicesSection" class="newCardSliderServices py-5 reveal">
+      <h1 id="newServicesHeading" class="section-headings">Services</h1>
+
+      <div class="services-hero">
+        <div class="new-services-carousel">
+          <ul style="transform: translateX(-100vw);">
+
+
+            <li>
+              <img src="img/electrical-design-drawing-new.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">Electrical Design and Planning
+                  </h3>
+                  <p class="new-services-card-text ">Let our comprehensive electrical design and planning service
+                    jumpstart
+                    your
+                    projects. In order to maximize safety, effectiveness, and cost-effectiveness, we specialize in
+                    creating custom solutions.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+            <li>
+              <img src="img/electrical-installation-and-maintenance-service.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">Installation and Maintenance
+                    Electricals
+                  </h3>
+                  <p class="new-services-card-text ">Experience seamless electrical solutions with our Electrical
+                    Installation and Management service. From safety-focused installations to efficient project
+                    management, we power your success.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+
+            <li>
+              <img src="img/Cable-Technician-new.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">Networking and Cabling
+                  </h3>
+                  <p class="new-services-card-text ">Unlock seamless connectivity with our Networking and Cabling
+                    expertise.
+                    <br>
+                    <br>
+                    We specialize in designing and deploying reliable networks, tailored to your unique
+                    requirements,
+                    to
+                    ensure your success.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+
+            <li>
+              <img src="img/ups-solution-services.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">UPS Solutions and Services
+
+                  </h3>
+                  <p class="new-services-card-text ">Elevate your power reliability with our UPS (Uninterruptible Power
+                    Supply) Solutions and Services. We provide robust, customized UPS systems that safeguard critical
+                    operations against power disruptions. Our expert team ensures seamless installation and offers
+                    comprehensive maintenance to keep your systems running flawlessly.
+
+
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+            <li>
+              <img src="img/data-center.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">Data Center Infrastructure Solutions
+
+                  </h3>
+                  <p class="new-services-card-text ">We create solutions that enhance the efficiency of an IT
+                    environment. We help your organization expand faster by providing the finest data center
+                    infrastructure. Raised floor, Electric work, Fire suppression system, Water leak detection, and Etc.
+
+
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+
+            <li>
+              <img src="img/it-facility-management-new.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">IT Facility Management Services
+
+                  </h3>
+                  <p class="new-services-card-text ">We provide facilities management services to monitor and safeguard
+                    your networks, systems, and applications. This allows you to concentrate on your primary business
+                    while we work on improving your IT infrastructure. Our IT facilities management services aid in
+                    productivity and efficiency.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+
+            <li>
+              <img src="img/fingerprint-access-control-system-new.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">Security and Access Control Systems
+                  </h3>
+                  <p class="new-services-card-text ">Access control is a data security process that enables
+                    organizations
+                    to
+                    manage
+                    who is authorized to access corporate data and resources. Secure access control uses policies
+                    that
+                    verify users are who they claim to be and ensures appropriate control access levels are
+                    granted
+                    to
+                    users.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+
+            <li>
+              <img src="img/fire-safety-new.webp" alt="">
+              <div class="services-image-overlay">
+                <div class="new-services-card-body">
+                  <h3 class="new-services-card-title" style="font-weight: bolder;">Fire Safety Solutions
+                  </h3>
+                  <p class="new-services-card-text ">We provide Fire safety solutions is the set of tools to reduce
+                    destruction
+                    caused
+                    by fire, like fire-alarms, fire-alert-system, Fire sensors, Safety Cylinders, etc. Fire safety
+                    measures include those that are intended to prevent the ignition of an uncontrolled fire and
+                    those
+                    that are used to limit the spread and impact of a fire.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+
+
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="deals session-heading py-5 ">
+      <h1 class="session-headings">We Deal in</h1>
+      <div class="row  g-5">
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/cisco_logo.webp" alt="ciscologo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/netrack_logo.webp"
+            alt="netracklogo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/valrack_logo.webp"
+            alt="valrack_logo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/Lenovo_logo.webp" alt="lenovologo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/Arista_logo.webp" alt="aristalogo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/Netgear_logo.webp"
+            alt="netgearlogo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/HCL_logo.webp" alt="hcllogo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/apw-president_logo.webp"
+            alt="apw-president_logo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/Avaya_Logo.webp" alt="Avaya_Logo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/CommScope_logo.webp"
+            alt="CommScope_logo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/ewit_logo.webp" alt="ewit_logo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/HP_Logo.webp" alt="HP_Logo"></div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/acer_logo.webp" alt="acer_logo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/dlink_logo.webp" alt="dlink_logo">
+        </div>
+        <div class="col-6 col-md-3 deals-img-box"><img class="card-img-top" src="img/comrack_logo.webp"
+            alt="comrack_logo"></div>
+      </div>
+
+
+    </section>
+
+
+
+    <div id="clientslist" class="py-5 container-fluid  ">
+
+      <div class="reveal">
+
+        <h1 id="hClients" class="section-headings" style="text-align:center; font-weight: bolder;">Our Few Clients</h1>
+        <hr>
+
+        <div class="   clientsList-container row  justify-content-center text-center  my-2 g-3">
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-1-n.webp" class="card-img-top" alt="PCS">
+                </div>
+                <div class="flip-box-back">
+                  <h2>PCS Technology</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-2-n.webp" class="card-img-top" alt="CHOICE">
+                </div>
+                <div class="flip-box-back">
+                  <h2>CHOICE SOLUTIONS</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-3-n.webp" class="card-img-top" alt="3I">
+                </div>
+                <div class="flip-box-back">
+                  <h2>3i Infotech</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-4-n.webp" class="card-img-top" alt="hcl">
+                </div>
+                <div class="flip-box-back">
+                  <h2>HCL</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-5-n.webp" class="card-img-top" alt="CALCOM">
+                </div>
+                <div class="flip-box-back">
+                  <h2>Calcom</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-6-n.webp" class="card-img-top" alt="grah">
+                </div>
+                <div class="flip-box-back">
+                  <h2>Grah</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-7-n.webp" class="card-img-top" alt="ek">
+                </div>
+                <div class="flip-box-back">
+                  <h2>eco</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-8-n.webp" class="card-img-top" alt="vedams">
+                </div>
+                <div class="flip-box-back">
+                  <h2>Vedams</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-9-n.webp" class="card-img-top" alt="gok">
+                </div>
+                <div class="flip-box-back">
+                  <h2>Govt. of Kerala</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-10-n.webp" class="card-img-top" alt="bank">
+                </div>
+                <div class="flip-box-back">
+                  <h2>Allahabad Bank</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="clientCard  col-6 col-xm-4 col-md-3 col-lg-3 ">
+
+
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img src="img/client-11-n.webp" class="card-img-top" alt="ubi">
+                </div>
+                <div class="flip-box-back">
+                  <h2>United Bank of India</h2>
+                  <!-- <p>What an amazing city</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div id="feedback" class="c-feedback py-5 container-fluid  reveal">
+      <h1 id="hFeedback" style="text-align:center; font-weight: bolder;" class="section-headings">Our Satisfied Clients
+        Speak</h1>
+      <hr>
+
+      <div class="app">
+        <div class="cardList">
+          <button class="cardList__btn btn btn--left">
+            <div class="icon">
+              <svg>
+                <use xlink:href="#arrow-left"></use>
+              </svg>
+            </div>
+          </button>
+
+          <div class="cards__wrapper">
+            <div class="feedback-card current--card">
+              <div class="card__image">
+                <img src="mussoorie.jpg" class="feedback-image" alt="" />
+              </div>
+            </div>
+
+            <div class="feedback-card next--card">
+              <div class="card__image">
+                <img src="mha.jpg" class="feedback-image" alt="" />
+              </div>
+            </div>
+
+            <div class="feedback-card previous--card">
+              <div class="card__image">
+                <img src="ministry_of_finance.jpg" class="feedback-image" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <button class="cardList__btn btn btn--right">
+            <div class="icon">
+              <svg>
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="infoList">
+          <div class="info__wrapper">
+
+
+            <div class="info current--info">
+              <h1 class="feedback-text name">LBSNAA Musoorie</h1>
+              <h4 class="feedback-text location"></h4>
+              <p class="feedback-text description">“As a government organization, we have relied on Ska Technology
+                for all of our networking and cabling needs. Their expertise is essential for ensuring the
+                continuous operation of our key infrastructure. Their technical proficiency and professional
+                demeanour make them invaluable resource for our organization. "
+              </p>
+            </div>
+
+            <div class="info next--info">
+              <h1 class="feedback-text name">Ministry of Home Affairs</h1>
+              <h4 class="feedback-text location"></h4>
+              <p class="feedback-text description">"As a government agency, we rely on impeccable networking and
+                cabling services, and Ska Technology has consistently delivered. Their expertise and precision
+                have elevated our communication infrastructure, ensuring reliability and efficiency. We
+                wholeheartedly endorse Ska Technology for its exceptional services." </p>
+            </div>
+
+            <div class="info previous--info">
+              <h1 class="feedback-text name">Ministry of Finance North Block</h1>
+              <h4 class="feedback-text location"></h4>
+              <p class="feedback-text description">"We have consistently chosen Ska Technology to take care of our
+                networking and cabling requirements as the North Block Ministry of Finance. It is very
+                astonishing how steadfastly they are committed to maintaining the reliability of our financial
+                systems. We wholeheartedly recommend their great services because of their professionalism and
+                technical proficiency."
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="app__bg">
+          <div class="app__bg__image current--image">
+            <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+          </div>
+          <div class="app__bg__image next--image">
+            <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+          </div>
+          <div class="app__bg__image previous--image">
+            <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+          <span></span>
+        </div>
+      </div>
+
+
+      <svg class="icons" style="display: none;">
+        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+          <polyline points='328 112 184 256 328 400'
+            style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+          <polyline points='184 112 328 256 184 400'
+            style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+      </svg>
+
+    </div>
+
+
+
+    <div id="ourWork" class="py-5 container-fluid  ">
+
+      <div class="whiteAboutContainer text-center reveal">
+        <h1 class="hGallery" style="text-align:center; font-weight: bolder;">Image Gallery</h1>
+        <hr>
+
+        <div class="galleryRow">
+          <div class="galleryCol">
+
+            <div class="gallery-image">
+              <img src="img/smallimg9new.webp" alt="" title="smallimg9new" class=" a1"
+                style="width: 100%; height: auto;">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Empowering Your Network</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg1new.webp" alt="" title="smallimg1new" class="a1" style="width: 100%;">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Powering Secure Communication</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg2new.webp" alt="" title="smallimg2new" class="a1" style="width: 100%;">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Ease to Monitor</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg3new.webp" alt="" title="smallimg3new" class="a1" style="width: 100%;">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Clear Network IO</h2>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="galleryCol">
+
+            <div class="gallery-image">
+              <img src="img/try.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">SeamLess Connectivity at its Core</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg4new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Proper Dressing to Handle Easily</h2>
+              </div>
+            </div>
+
+
+            <div class="gallery-image">
+              <img src="img/smallimg6new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Back-Side Cabling</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg8new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Clear Network IO</h2>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="galleryCol">
+
+            <div class="gallery-image">
+              <img src="img/smallimg7new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Efficiency Unleashed</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg15new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Manageable Switch</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg12new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Fully Loaded Reck with Switches Dressed </h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg14new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Clear Network IO</h2>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+          <div class="galleryCol">
+
+            <div class="gallery-image">
+              <img src="img/smallimg17new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Loaded With LIU </h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg18new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Our Results</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg16new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Best Finishing</h2>
+              </div>
+            </div>
+
+            <div class="gallery-image">
+              <img src="img/smallimg19new.webp" alt="" style="width: 100%;" class="a1">
+              <div class="overlay1 overlay1Left">
+                <h2 class="old-gal-text">Reliable LAN to UPS Connection</h2>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <div id="contact" class="py-5 container-fluid ">
+      <div class="container reveal">
+        <h1 id="hContact" class="text-center">Contact Us</h1>
+        <hr>
+
+        <form class="row g-3 needs-validation" id="contactForm" action="">
+
+          <div class="col-md-6  form-input">
+            <!-- <label for="inputName4" class="form-label">Name <span style="color: red;">*</span></label> -->
+            <input type="text" class="form-control form-border-bottom" id="inputName4" required
+              placeholder="Your name*">
+          </div>
+
+          <div class="col-md-6  form-input">
+            <!-- <label for="inputEmail4" class="form-label">Email</label> -->
+            <input type="email" class="form-control form-border-bottom" id="inputEmail4"
+              placeholder="Please enter Email-ID">
+          </div>
+
+          <div class="col-md-6  form-input">
+            <!-- <label for="inputNumber4" class="form-label">Contact Number:<span style="color: red;">*</span></label> -->
+            <input type="tel" class="form-control form-border-bottom" id="inputNumber4" required
+              placeholder="Your 10 Digit Mobile Number*">
+          </div>
+
+          <div class="col-md-6  form-input">
+            <!-- <label for="inputCompany4" class="form-label">Company Name </span></label> -->
+            <input type="text" class="form-control form-border-bottom" id="inputCompany4" placeholder="Company Name">
+          </div>
+
+
+          <div class="col-md-6  form-input">
+            <!-- <label for="inputCity" class="form-label">City </label> -->
+            <input type="text" class="form-control form-border-bottom" id="inputCity" placeholder="City">
+          </div>
+
+          <div class="col-md-4  form-input">
+            <!-- <label for="inputState" class="form-label">State</label> -->
+            <input type="text" class="form-control form-border-bottom" id="inputState" placeholder="State">
+
+          </div>
+          <div class="col-md-2  form-input">
+            <!-- <label for="inputPinCode" class="form-label">PIN Code</label> -->
+            <input type="text" class="form-control form-border-bottom" id="inputPinCode" placeholder="PIN Code">
+          </div>
+
+          <div class="col-md-12  form-input">
+            <!-- <label for="inputPinCode" class="form-label">PIN Code</label> -->
+            <textarea class="form-control form-border-bottom" id="inputMessage" rows="2"
+              placeholder="Write about your requirement..."></textarea>
+
+          </div>
+
+
+
+          <div class="col-12">
+            <div class="form-check  form-input">
+              <input class="form-check-input" type="checkbox" id="gridCheck" required>
+              <label class="form-check-label" for="gridCheck" style="">
+                I hereby declare that the information given above are true to the best of
+                my knowledge and belief and nothing has been concealed therein. I understand that if the information
+                given by me is proved false/not true, I may have to face the punishment as per the law.
+
+              </label>
+            </div>
+          </div>
+
+
+          <div class="col-6 d-grid mx-auto form-input">
+            <button type="button" id="cSubmit" value="Send Email" class="btn btn-primary btn-large "
+              disabled>Submit</button>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+  <footer class="container-fluid bg-dark text-light py-5">
+    <div class="container ">
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <h1 id="locationHeading">Our Location</h1>
+          <hr>
+          <iframe class="container"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14003.169875119209!2d77.1161481!3d28.665932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d039cc0000001%3A0x18730966f35c90a!2sSKA%20Technology%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1697304725921!5m2!1sen!2sin"
+            style="border:0; height:30vh;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6">
+
+
+
+          <h1 id="headingContactDetails">Contact Details</h1>
+          <hr>
+          <div class="row contactDetailsText">
+
+            <div class="col-md-6">
+              <h3>Head Office</h3>
+
+              <p class="">
+                <i class='far fa-address-card' style='font-size:36px;color:white;'></i>
+                <br>
+                455 Pocket-3 Paschim Puri
+                <br>
+                New Delhi - 110063
+              </p>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Direct contact</h3>
+              <p>
+
+                <i class='fas fa-phone' style='font-size:24px; color:white;'></i>
+                <br>
+                Phone:
+                011-25211466
+                <br>
+                Mobile:
+                9711831477, 9213161466, 9312040965
+                <br>
+                <i class='fas fa-envelope-square' style='font-size:24px;color:white;'></i>
+                <br>
+                E-mail:
+                <br>
+                info@ska-tech.com
+                <br>
+                niranjan@ska-tech.com
+                <br>
+                ska_009@yahoo.co.in
+
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+      <hr>
+    </div>
+    <p class="py-1 text-center">Copyright &copy; All Rights reserved. SKA Technology Pvt. Ltd.</p>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="script.js"></script>
+
+
+  <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+
+  <script type="text/javascript">
+
+
+    const { gsap, imagesLoaded } = window;
+
+    const buttons = {
+      prev: document.querySelector(".btn--left"),
+      next: document.querySelector(".btn--right"),
+    };
+    const cardsContainerEl = document.querySelector(".cards__wrapper");
+    const appBgContainerEl = document.querySelector(".app__bg");
+
+    const cardInfosContainerEl = document.querySelector(".info__wrapper");
+
+    buttons.next.addEventListener("click", () => swapCards("right"));
+
+    buttons.prev.addEventListener("click", () => swapCards("left"));
+
+    function swapCards(direction) {
+      const currentCardEl = cardsContainerEl.querySelector(".current--card");
+      const previousCardEl = cardsContainerEl.querySelector(".previous--card");
+      const nextCardEl = cardsContainerEl.querySelector(".next--card");
+
+      const currentBgImageEl = appBgContainerEl.querySelector(".current--image");
+      const previousBgImageEl = appBgContainerEl.querySelector(".previous--image");
+      const nextBgImageEl = appBgContainerEl.querySelector(".next--image");
+
+      changeInfo(direction);
+      swapCardsClass();
+
+      removeCardEvents(currentCardEl);
+
+      function swapCardsClass() {
+        currentCardEl.classList.remove("current--card");
+        previousCardEl.classList.remove("previous--card");
+        nextCardEl.classList.remove("next--card");
+
+        currentBgImageEl.classList.remove("current--image");
+        previousBgImageEl.classList.remove("previous--image");
+        nextBgImageEl.classList.remove("next--image");
+
+        currentCardEl.style.zIndex = "50";
+        currentBgImageEl.style.zIndex = "-2";
+
+        if (direction === "right") {
+          previousCardEl.style.zIndex = "20";
+          nextCardEl.style.zIndex = "30";
+
+          nextBgImageEl.style.zIndex = "-1";
+
+          currentCardEl.classList.add("previous--card");
+          previousCardEl.classList.add("next--card");
+          nextCardEl.classList.add("current--card");
+
+          currentBgImageEl.classList.add("previous--image");
+          previousBgImageEl.classList.add("next--image");
+          nextBgImageEl.classList.add("current--image");
+        } else if (direction === "left") {
+          previousCardEl.style.zIndex = "30";
+          nextCardEl.style.zIndex = "20";
+
+          previousBgImageEl.style.zIndex = "-1";
+
+          currentCardEl.classList.add("next--card");
+          previousCardEl.classList.add("current--card");
+          nextCardEl.classList.add("previous--card");
+
+          currentBgImageEl.classList.add("next--image");
+          previousBgImageEl.classList.add("current--image");
+          nextBgImageEl.classList.add("previous--image");
+        }
+      }
+    }
+
+    function changeInfo(direction) {
+      let currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+      let previousInfoEl = cardInfosContainerEl.querySelector(".previous--info");
+      let nextInfoEl = cardInfosContainerEl.querySelector(".next--info");
+
+      gsap.timeline()
+        .to([buttons.prev, buttons.next], {
+          duration: 0.2,
+          opacity: 0.5,
+          pointerEvents: "none",
+        })
+        .to(
+          currentInfoEl.querySelectorAll(".feedback-text"),
+          {
+            duration: 0.4,
+            stagger: 0.1,
+            translateY: "-120px",
+            opacity: 0,
+          },
+          "-="
+        )
+        .call(() => {
+          swapInfosClass(direction);
+        })
+        .call(() => initCardEvents())
+        .fromTo(
+          direction === "right"
+            ? nextInfoEl.querySelectorAll(".feedback-text")
+            : previousInfoEl.querySelectorAll(".feedback-text"),
+          {
+            opacity: 0,
+            translateY: "40px",
+          },
+          {
+            duration: 0.4,
+            stagger: 0.1,
+            translateY: "0px",
+            opacity: 1,
+          }
+        )
+        .to([buttons.prev, buttons.next], {
+          duration: 0.2,
+          opacity: 1,
+          pointerEvents: "all",
+        });
+
+      function swapInfosClass() {
+        currentInfoEl.classList.remove("current--info");
+        previousInfoEl.classList.remove("previous--info");
+        nextInfoEl.classList.remove("next--info");
+
+        if (direction === "right") {
+          currentInfoEl.classList.add("previous--info");
+          nextInfoEl.classList.add("current--info");
+          previousInfoEl.classList.add("next--info");
+        } else if (direction === "left") {
+          currentInfoEl.classList.add("next--info");
+          nextInfoEl.classList.add("previous--info");
+          previousInfoEl.classList.add("current--info");
+        }
+      }
+    }
+
+    function updateCard(e) {
+      const card = e.currentTarget;
+      const box = card.getBoundingClientRect();
+      const centerPosition = {
+        x: box.left + box.width / 2,
+        y: box.top + box.height / 2,
+      };
+      let angle = Math.atan2(e.pageX - centerPosition.x, 0) * (35 / Math.PI);
+      gsap.set(card, {
+        "--currentfeedback-card-rotation-offset": `${angle}deg`,
+      });
+      const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+      gsap.set(currentInfoEl, {
+        rotateY: `${angle}deg`,
+      });
+    }
+
+    function resetCardTransforms(e) {
+      const card = e.currentTarget;
+      const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+      gsap.set(card, {
+        "--currentfeedback-card-rotation-offset": 0,
+      });
+      gsap.set(currentInfoEl, {
+        rotateY: 0,
+      });
+    }
+
+    function initCardEvents() {
+      const currentCardEl = cardsContainerEl.querySelector(".current--card");
+      currentCardEl.addEventListener("pointermove", updateCard);
+      currentCardEl.addEventListener("pointerout", (e) => {
+        resetCardTransforms(e);
+      });
+    }
+
+    initCardEvents();
+
+    function removeCardEvents(card) {
+      card.removeEventListener("pointermove", updateCard);
+    }
+
+    function init() {
+
+      let tl = gsap.timeline();
+
+      tl.to(cardsContainerEl.children, {
+        delay: 0.15,
+        duration: 0.5,
+        stagger: {
+          ease: "power4.inOut",
+          from: "right",
+          amount: 0.1,
+        },
+        "--feedback-card-translateY-offset": "0%",
+      })
+        .to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".feedback-text"), {
+          delay: 0.5,
+          duration: 0.4,
+          stagger: 0.1,
+          opacity: 1,
+          translateY: 0,
+        })
+        .to(
+          [buttons.prev, buttons.next],
+          {
+            duration: 0.4,
+            opacity: 1,
+            pointerEvents: "all",
+          },
+          "-=0.4"
+        );
+    }
+
+
+    const waitForImages = () => {
+      const images = document.querySelectorAll(".feedback-image");
+      const totalImages = images.length;
+      let loadedImages = 0;
+      const loaderEl = document.querySelector(".loader span");
+
+
+      gsap.set(cardsContainerEl.children, {
+        "--feedback-card-translateY-offset": "100vh",
+      });
+      gsap.set(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".feedback-text"), {
+        translateY: "40px",
+        opacity: 0,
+      });
+      gsap.set([buttons.prev, buttons.next], {
+        pointerEvents: "none",
+        opacity: "0",
+      });
+
+      images.forEach((image) => {
+        imagesLoaded(image, (instance) => {
+          if (instance.isComplete) {
+            loadedImages++;
+            let loadProgress = loadedImages / totalImages;
+
+            gsap.to(loaderEl, {
+              duration: 1,
+              scaleX: loadProgress,
+              backgroundColor: `hsl(${loadProgress * 120}, 100%, 50%`,
+            });
+
+            if (totalImages == loadedImages) {
+              gsap.timeline()
+                .to(".loading__wrapper", {
+                  duration: 0.8,
+                  opacity: 0,
+                  pointerEvents: "none",
+                })
+                .call(() => init());
+            }
+          }
+        });
+      });
+    };
+
+    waitForImages();
+
+  </script>
+
+  <script src="lib/jquery.flipster.min.js"></script>
+  <script type="text/javascript">
+    $('.new-services-carousel').flipster({
+      style: 'carousel',
+      spacing: -0.3,
+      autoplay: 3000,
+      loop: true,
+      start: 0,
+      scrollwheel: false,
+      buttons: true,
+    });
+
+
+  </script>
+
+
+
+</body>
+
+</html>
