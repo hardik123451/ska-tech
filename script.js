@@ -513,8 +513,6 @@ setTimeout(function () {
 let body = document.querySelector("body");
 body.setAttribute("onload", "slideShowStarts();");
 
-
-
 let bannerDots = document.getElementsByClassName("bannerDots");
 let bannerBoxs = document.getElementsByClassName("bannerBoxs");
 
@@ -538,7 +536,8 @@ let overlayBanner4 = document.querySelector(".overlayBanner4");
 
 let startTime = new Date();
 console.log(startTime, Number(startTime));
-let dTime = 0;
+let dTime = 2500;
+
 
 function show1hideAll() {
   console.log("1st slide showing")
@@ -694,33 +693,20 @@ function show1hide4() {
 function slideShowStarts() {
 
   console.log("show hide starts, 1st slide showing");
-  
 
-  timeoutslide0 = setTimeout(show1hideAll, 0);
-
-  timeoutslide1 = setTimeout(show2hide1, 8000);
-
-  timeoutslide2 = setTimeout(show3hide2, 16000);
-
-  timeoutslide3 = setTimeout(show4hide3, 24000);
-
-  timeoutslide4 = setTimeout(show1hide4, 32000);
-
+  timeoutslide0 = setTimeout(show1hideAll, 0 + dTime);
+  timeoutslide1 = setTimeout(show2hide1, 8000 + dTime);
+  timeoutslide2 = setTimeout(show3hide2, 16000  + dTime);
+  timeoutslide3 = setTimeout(show4hide3, 24000 + dTime);
+  timeoutslide4 = setTimeout(show1hide4, 32000 + dTime);
 
   interval1st = setInterval(() => {
+    setTimeout(show2hide1, 8000 + dTime);
+    setTimeout(show3hide2, 16000 + dTime);
+    setTimeout(show4hide3, 24000 + dTime);
+    setTimeout(show1hide4, 32000 + dTime);
 
-    setTimeout(show2hide1, 8000);
-
-
-    setTimeout(show3hide2, 16000);
-
-
-    setTimeout(show4hide3, 24000);
-
-
-    setTimeout(show1hide4, 32000);
-
-  }, 32000);
+  }, 32000 );
 }
 
 
