@@ -509,6 +509,10 @@ setTimeout(function () {
 
 
 
+let startTime = new Date();
+console.log(startTime, Number(startTime));
+
+let dTime = 0;
 
 let body = document.querySelector("body");
 body.setAttribute("onload", "slideShowStarts();");
@@ -534,9 +538,6 @@ let overlayBanner2 = document.querySelector(".overlayBanner2");
 let overlayBanner3 = document.querySelector(".overlayBanner3");
 let overlayBanner4 = document.querySelector(".overlayBanner4");
 
-let startTime = new Date();
-console.log(startTime, Number(startTime));
-let dTime = 2500;
 
 
 function show1hideAll() {
@@ -693,6 +694,11 @@ function show1hide4() {
 function slideShowStarts() {
 
   console.log("show hide starts, 1st slide showing");
+
+  var endTime = new Date();
+  dTime = Number(endTime) - Number(startTime) + 2500;
+  console.log(dTime);
+
 
   timeoutslide0 = setTimeout(show1hideAll, 0 + dTime);
   timeoutslide1 = setTimeout(show2hide1, 8000 + dTime);
