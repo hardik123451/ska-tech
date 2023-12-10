@@ -696,7 +696,7 @@ function slideShowStarts() {
   console.log("show hide starts, 1st slide showing");
 
   var endTime = new Date();
-  dTime = Number(endTime) - Number(startTime) + 2500;
+  dTime = Number(endTime) - Number(startTime) + 2000;
   console.log(dTime);
 
 
