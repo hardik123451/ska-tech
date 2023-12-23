@@ -983,7 +983,7 @@ main {
 
 
 .newCardSliderServices {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/bg-service-new.webp");
+    background: linear-gradient(rgba(24, 24, 24, 0.7), rgba(30, 30, 30, 0.7)), url("/img/bg-service-new.webp");
     background-repeat: round;
     background-attachment: fixed;
     
