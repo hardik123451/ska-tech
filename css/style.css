@@ -693,7 +693,7 @@ main {
 
 
 .whiteAboutContainer {
-    width: 90%;
+    width: 80%;
     margin: auto;
     /* min-height: 5vh;
     max-height: 5vh; */
@@ -1181,7 +1181,7 @@ main {
 
 
 .deals {
-    width: 90vw;
+    width: 80vw;
     margin: auto;
     text-align: center;
 }
@@ -1232,7 +1232,7 @@ main {
 
 
 .clientsList-container {
-    width: 90%;
+    width: 80%;
     margin: auto;
 
 }
@@ -1241,7 +1241,7 @@ main {
 
 .flip-box {
     background-color: transparent;
-    width: 20vw;
+    width: 18vw;
     height: 26vh;
     justify-content: center;
     align-items: center;
@@ -1479,7 +1479,7 @@ button:focus {
 }
 
 .cardList__btn {
-    --btn-size: 45px;
+    --btn-size: 65px;
     width: var(--btn-size);
     height: var(--btn-size);
     position: absolute;
@@ -1593,7 +1593,7 @@ button:focus {
 
 .infoList {
     position: absolute;
-    width: calc(3 * var(--feedback-card-width));
+    width: calc(2.8 * var(--feedback-card-width));
     height: var(--feedback-card-height);
     pointer-events: none;
 }
@@ -1625,12 +1625,19 @@ button:focus {
     font-family: "Montserrat";
     font-size: calc(var(--feedback-card-width) * var(--feedback-text-size-offset, 0.035));
     text-shadow: 3px 3px 3px black;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     /* white-space: nowrap; */
     color: #fff;
     width: fit-content;
 }
 
+
+.info  .name{
+    font-weight: bolder;
+}
+.info .description{
+    font-weight: 500;
+}
 
 .info .name,
 .info .location {
