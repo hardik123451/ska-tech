@@ -695,9 +695,9 @@ function slideShowStarts() {
 
   console.log("show hide starts, 1st slide showing now");
 
-  var endTime = new Date();
-  dTime = Number(endTime) - Number(startTime) + 1000;
-  console.log(dTime);
+  // var endTime = new Date();
+  // dTime = Number(endTime) - Number(startTime);
+  // console.log(dTime);
 
 
   timeoutslide0 = setTimeout(show1hideAll, 0 + dTime);
